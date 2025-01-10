@@ -1,6 +1,6 @@
 <div align="center">
     <h1>
-        <img src="https://readme-typing-svg.herokuapp.com?font=Jetbrains+mono&size=40&duration=3000&color=33FF33&center=true&vCenter=true&width=435&lines=Hey..+I'm+gnuJason;This+is..;..my+Github..;" alt="Typing SVG"/>
+        <img src="https://readme-typing-svg.herokuapp.com?font=Jetbrains+mono&size=40&duration=3000&color=7DF9FF&center=true&vCenter=true&width=435&lines=Hey..+I'm+gnuJason;This+is..;..my+Github..;" alt="Typing SVG"/>
     </h1>
 </div>
 <div align="center">
@@ -20,13 +20,6 @@
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=GnuJason&layout=compact&theme=dark" alt="Top Languages"/>
   </a>
 </div>
-<div align="center">
-  <h2>🚀 World Population Ticker</h2>
-  <p>This section displays an approximation of the world's population in a ticker format.</p>
-  <img src="https://api.kde.org/kdeappimg/kpat-1.0.0/2D-Ticker/panel_2.png" alt="World Population Ticker"/>
-</div>
-
-
 <h2 align="center" class="section-heading">💻 Programming Languages</h2>
 <p>I've developed proficiency in a diverse set of programming languages. Here are the languages:</p>
 <div align="center">
@@ -34,7 +27,10 @@
     <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell"/>
     <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash"/>
     <img src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white" alt="Swift"/>
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
 </div>
+
 <h2 align="center" class="section-heading">🔧 Frameworks</h2>
 <p>Frameworks are the backbone of my development process, providing the structure and tools necessary for building scalable, efficient applications.</p>
 <div align="center">
@@ -51,15 +47,3 @@
     <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
     <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
 </div>
-
-
-
-
-- 📫 How to reach me ...gnuJason@mailfence.com
-  
-  
-
-<!---
-GnuJason/GnuJason is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
