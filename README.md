@@ -34,14 +34,9 @@
 <h2 align="center" class="section-heading">🔧 Frameworks</h2>
 <p>Frameworks are the backbone of my development process, providing the structure and tools necessary for building scalable, efficient applications.</p>
 <div align="center">
-  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel"/>
-<img src="https://img.shields.io/badge/Symfony-000000?style=for-the-badge&logo=symfony&logoColor=white" alt="Symfony"/>
 <img src="https://img.shields.io/badge/CodeIgniter-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white" alt="CodeIgniter"/>
 <img src="https://img.shields.io/badge/CakePHP-D33C43?style=for-the-badge&logo=cakephp&logoColor=white" alt="CakePHP"/>
 <img src="https://img.shields.io/badge/Yii-0078D7?style=for-the-badge&logo=yii&logoColor=white" alt="Yii"/>
 <img src="https://img.shields.io/badge/FuelPHP-3498DB?style=for-the-badge&logo=fuelphp&logoColor=white" alt="FuelPHP"/>
-<img src="https://img.shields.io/badge/Phalcon-EE732E?style=for-the-badge&logo=phalcon&logoColor=white" alt="Phalcon"/>
-<img src="https://img.shields.io/badge/Slim-4A4A55?style=for-the-badge&logo=slim&logoColor=white" alt="Slim"/>
-<img src="https://img.shields.io/badge/Zend-FFFFFF?style=for-the-badge&logo=zend&logoColor=black" alt="Zend"/>
 
 </div>
