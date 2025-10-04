@@ -1,66 +1,92 @@
-# 🏁 Jason's GitHub // Built to Move
+<div align="center">
 
-> *"Every build is a billboard. Every repo is a runway."*
+<!-- BILLBOARD HERO SECTION -->
+<div style="position: relative; width: 100%; background: url('https://github.com/GnuJason/GnuJason/raw/main/assets/billboard-clip.gif') center/cover; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
 
----
+# 🏁 JASON'S GITHUB
+## BUILT TO MOVE
 
-## 🎬 Billboard Clip
+### *"Every build is a billboard. Every repo is a runway."*
 
-![Billboard Clip](https://github.com/GnuJason/GnuJason/raw/main/assets/billboard-clip.gif)
+</div>
 
-*Above: Project Billboard Clip (autoplays, muted, loops).*
+![Billboard Background](https://github.com/GnuJason/GnuJason/raw/main/assets/billboard-clip.gif)
 
----
-
-## 🧠 Philosophy
-
-> *"Code is kinetic. Data is design. Innovation is movement."*
-
-- ⚡ **Modular by design** - Clean architecture that scales  
-- 🔒 **Error-proof by instinct** - Defensive coding practices  
-- 🤝 **Collaborative by nature** - Open source mindset  
-- 🌐 **Built for clarity, scaled for impact** - User-first development  
+</div>
 
 ---
 
-## 🔥 Featured Projects
+## 🧠 PHILOSOPHY
+<div align="center">
 
-| 🧩 Project              | 💡 Description                                              | 🚦 Status         |
-|-------------------------|-------------------------------------------------------------|-------------------|
-| **Recipe Manager Pro**  | Modern recipe organization and meal planning platform       | 🚧 Sprint in progress |
-| **Pulse of Humanity**   | Real-time population dashboard with wearable integration     | ✅ Live            |
-| **Pulse of Scandinavia**| Nordic data mirror with centralized metrics                 | 🧭 In development  |
-| **Watch Complications** | Custom Wear OS designs with tap-to-dashboard actions        | 🎯 Deploying soon |
+> ### *"Code is kinetic. Data is design. Innovation is movement."*
 
----
+</div>
 
-## 🧰 Toolbox
+<div align="center">
 
-![Bash](https://img.shields.io/badge/Bash-000000?style=flat&logo=gnubash&logoColor=white)
-![VS Code](https://img.shields.io/badge/VSCode-111111?style=flat&logo=visualstudiocode&logoColor=cyan)
-![Wear OS](https://img.shields.io/badge/WearOS-000000?style=flat&logo=google&logoColor=lime)
-![Tailwind](https://img.shields.io/badge/TailwindCSS-000000?style=flat&logo=tailwindcss&logoColor=magenta)
+⚡ **MODULAR BY DESIGN** • Clean architecture that scales  
+🔒 **ERROR-PROOF BY INSTINCT** • Defensive coding practices  
+🤝 **COLLABORATIVE BY NATURE** • Open source mindset  
+🌐 **BUILT FOR CLARITY, SCALED FOR IMPACT** • User-first development  
+
+</div>
 
 ---
 
-## 🧬 Glitch & Neon Energy
+## 🔥 FEATURED PROJECTS
 
-> *"This README doesn't scroll. It pulses."*
+<div align="center">
 
-- 🎞️ **Animated skyline loop** with your own soundtrack  
-- 🌈 **Neon-accented badges** for tools and frameworks  
-- ✨ **Glitch overlays** in banners (future GitHub Pages expansion)  
-- 🚀 **Dynamic content** that adapts and evolves  
+| 🧩 **PROJECT** | 💡 **DESCRIPTION** | 🚦 **STATUS** |
+|:---:|:---:|:---:|
+| **Recipe Manager Pro** | Modern recipe organization and meal planning platform | 🚧 **SPRINT IN PROGRESS** |
+| **Pulse of Humanity** | Real-time population dashboard with wearable integration | ✅ **LIVE** |
+| **Pulse of Scandinavia** | Nordic data mirror with centralized metrics | 🧭 **IN DEVELOPMENT** |
+| **Watch Complications** | Custom Wear OS designs with tap-to-dashboard actions | 🎯 **DEPLOYING SOON** |
 
----
-
-## 🤝 Let's Connect
-
-- 🧠 [LinkedIn](https://linkedin.com/in/gnujason)  
-- 🛠️ [Dev.to](https://dev.to/gnujason)  
-- 📫 Reach me: `gnujason@mailfence.com`  
-- 🐙 [GitHub](https://github.com/GnuJason)
+</div>
 
 ---
 
-> *"Don't just build. Broadcast."*
+## 🧰 TOOLBOX
+
+<div align="center">
+
+![Bash](https://img.shields.io/badge/BASH-000000?style=for-the-badge&logo=gnubash&logoColor=white)
+![VS Code](https://img.shields.io/badge/VSCODE-111111?style=for-the-badge&logo=visualstudiocode&logoColor=cyan)
+![Wear OS](https://img.shields.io/badge/WEAROS-000000?style=for-the-badge&logo=google&logoColor=lime)
+![Tailwind](https://img.shields.io/badge/TAILWINDCSS-000000?style=for-the-badge&logo=tailwindcss&logoColor=magenta)
+
+</div>
+
+---
+
+## 🧬 GLITCH & NEON ENERGY
+
+<div align="center">
+
+> ### *"This README doesn't scroll. It pulses."*
+
+🎞️ **ANIMATED SKYLINE LOOP** with your own soundtrack  
+🌈 **NEON-ACCENTED BADGES** for tools and frameworks  
+✨ **GLITCH OVERLAYS** in banners (future GitHub Pages expansion)  
+🚀 **DYNAMIC CONTENT** that adapts and evolves  
+
+</div>
+
+---
+
+## 🤝 LET'S CONNECT
+
+<div align="center">
+
+🧠 **[LINKEDIN](https://linkedin.com/in/gnujason)** • 🛠️ **[DEV.TO](https://dev.to/gnujason)** • 🐙 **[GITHUB](https://github.com/GnuJason)**  
+
+📫 **REACH ME:** `gnujason@mailfence.com`
+
+---
+
+> ### *"Don't just build. Broadcast."*
+
+</div>
