@@ -30,7 +30,7 @@
 
 | 🧩 Project              | 💡 Description                                              | 🚦 Status         |
 |-------------------------|-------------------------------------------------------------|-------------------|
-| **WikiRecipes**         | Modular recipe wizard with restored UI polish               | 🚧 Sprint in progress |
+| **Wiki..SHHHHH**         | Modular recipe wizard with restored UI polish               | 🚧 Sprint in progress |
 | **Pulse of Humanity**   | Real-time population dashboard with wearable integration     | ✅ Live            |
 | **Pulse of Scandinavia**| Nordic data mirror with centralized metrics                 | 🧭 In development  |
 | **Watch Complications** | Custom Wear OS designs with tap-to-dashboard actions        | 🎯 Deploying soon |
@@ -61,7 +61,7 @@
 
 - 🧠 [LinkedIn](https://linkedin.com/in/gnujason)  
 - 🛠️ [Dev.to](https://dev.to/gnujason)  
-- 📫 Reach me: `jason@example.com`  
+- 📫 Reach me: `gnujason@mailfence`  
 - 🐙 [GitHub](https://github.com/GnuJason)
 
 ---
