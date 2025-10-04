@@ -6,10 +6,7 @@
 
 ## 🎬 Billboard Clip
 
-<video width="100%" autoplay muted loop controls>
-  <source src="https://github.com/GnuJason/GnuJason/raw/main/assets/billboard-clip.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Billboard Clip](https://github.com/GnuJason/GnuJason/raw/main/assets/billboard-clip.gif)
 
 *Above: Project Billboard Clip (autoplays, muted, loops).*
 
