@@ -7,7 +7,7 @@
 ## 🎬 Billboard Clip
 
 <video width="100%" autoplay muted loop controls>
-  <source src="./assets/billboard-clip.mp4" type="video/mp4">
+  <source src="https://github.com/GnuJason/GnuJason/raw/main/assets/billboard-clip.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -22,7 +22,7 @@
 - ⚡ **Modular by design** - Clean architecture that scales  
 - 🔒 **Error-proof by instinct** - Defensive coding practices  
 - 🤝 **Collaborative by nature** - Open source mindset  
-- �� **Built for clarity, scaled for impact** - User-first development  
+- 🌐 **Built for clarity, scaled for impact** - User-first development  
 
 ---
 
@@ -30,7 +30,7 @@
 
 | 🧩 Project              | 💡 Description                                              | 🚦 Status         |
 |-------------------------|-------------------------------------------------------------|-------------------|
-| **Wiki..SHHHHH**         | Modular recipe wizard with restored UI polish               | 🚧 Sprint in progress |
+| **Recipe Manager Pro**  | Modern recipe organization and meal planning platform       | 🚧 Sprint in progress |
 | **Pulse of Humanity**   | Real-time population dashboard with wearable integration     | ✅ Live            |
 | **Pulse of Scandinavia**| Nordic data mirror with centralized metrics                 | 🧭 In development  |
 | **Watch Complications** | Custom Wear OS designs with tap-to-dashboard actions        | 🎯 Deploying soon |
@@ -61,7 +61,7 @@
 
 - 🧠 [LinkedIn](https://linkedin.com/in/gnujason)  
 - 🛠️ [Dev.to](https://dev.to/gnujason)  
-- 📫 Reach me: `gnujason@mailfence`  
+- 📫 Reach me: `gnujason@mailfence.com`  
 - 🐙 [GitHub](https://github.com/GnuJason)
 
 ---
