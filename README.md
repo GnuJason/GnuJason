@@ -3,5 +3,6 @@
   <img src="https://github.com/GnuJason/GnuJason/blob/main/assets/nike%20ad%202.png?raw=true" width="1000">
   <img src="https://github.com/GnuJason/GnuJason/blob/main/assets/court.jpg" width="1000">
   <img src="https://github.com/GnuJason/GnuJason/blob/main/assets/court_outdoors.jpg" width="1000">
+  <img src="https://github.com/GnuJason/GnuJason/blob/main/assets/beauty_shots.jpg" width="1000">
 
 </div>
