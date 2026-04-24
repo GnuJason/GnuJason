@@ -1,0 +1,79 @@
+name: Neon-Noir Asset Forge
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * 1"
+
+jobs:
+  build-assets:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install ImageMagick
+      run: sudo apt-get install -y imagemagick
+
+    - name: Install Gifsicle
+      run: sudo apt-get install -y gifsicle
+
+    - name: Install FFmpeg
+      run: sudo apt-get install -y ffmpeg
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Install Python dependencies
+      run: |
+        pip install pillow numpy
+
+    - name: Install Node dependencies
+      run: |
+        npm install
+
+    - name: Generate parallax skyline layers
+      run: |
+        python scripts/generate_parallax.py
+
+    - name: Generate neon-noir weather loops
+      run: |
+        python scripts/generate_weather.py
+
+    - name: Build neon-noir banner
+      run: |
+        node scripts/composite_banner.js
+
+    - name: Build tall right-panel GIF
+      run: |
+        node scripts/build_right_panel.js
+
+    - name: Build skyline footer loop
+      run: |
+        python scripts/build_footer_loop.py
+
+    - name: Optimize GIFs
+      run: |
+        find assets -name "*.gif" -exec gifsicle -O3 {} -o {} \;
+
+    - name: Optimize PNGs
+      run: |
+        find assets -name "*.png" -exec mogrify -strip -interlace Plane -quality 90 {} \;
+
+    - name: Commit and push assets
+      run: |
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add assets/
+        git commit -m "Automated asset rebuild (Neon-Noir Asset Forge)" || echo "No changes to commit"
+        git push
