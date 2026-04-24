@@ -1,4 +1,3 @@
-```markdown
 <div align="center">
 
 <img src="assets/banners/banner_frame_0.png" width="1000">
@@ -8,11 +7,11 @@
 
 </div>
 
----
+
 
 ## 🟣 Terminal Boot Sequence — `profile.sys/init`
 
-```
+
 > establishing uplink…
 > verifying parallax layers… ok
 > loading neon‑noir skyline… ok
@@ -22,7 +21,7 @@
 > GrandmaGames_platform: online
 > Pulse_of_Humanity: rendering
 > status: ACTIVE
-```
+
 
 ---
 
@@ -87,13 +86,13 @@ I don’t just build features — I maintain ecosystems.
 
 ## 🟦 Tech Stack (Core Modules)
 
-```
+
 Frontend:   React · React Native · D3 · Three.js
 Backend:    FastAPI · Node · Python
 Systems:    GitHub Actions · CI/CD · Docker · WSL
 Graphics:   Pillow · Canvas · FFmpeg · ImageMagick
 Philosophy: Audit-driven engineering · Deterministic workflows
-```
+
 
 ---
 
