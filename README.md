@@ -33,7 +33,7 @@
 
 ## 🟦 Who I Am (System Overview)
 
-I’m **Jason**, a senior engineer and platform steward specializing in:
+I’m **Jason**, a engineering student and platform steward specializing in:
 
 - **audit‑driven refactoring**
 - **deterministic restoration**
@@ -44,7 +44,7 @@ I’m **Jason**, a senior engineer and platform steward specializing in:
 
 My work spans **GrandmaGames**, **Pulse projects**, and **Wikirecipes.org**, where I lead system audits, platform migrations, and reproducible deployment pipelines.
 
-I’m currently building a **CMU MSE portfolio** centered on:
+I’m currently building a **portfolio** centered on:
 
 - platform engineering  
 - simulation systems  
@@ -68,7 +68,6 @@ This repo’s neon‑noir engine is the prototype rendering pipeline.
 
 ---
 
-## 🟩 Engineering Philosophy
 
 ### **Audit Everything**  
 Every system tells a story. I read it, rewrite it, and make it reproducible.
@@ -84,7 +83,6 @@ I don’t just build features — I maintain ecosystems.
 
 ---
 
-## 🟦 Tech Stack (Core Modules)
 
 
 Frontend:   React · React Native · D3 · Three.js
@@ -96,7 +94,6 @@ Philosophy: Audit-driven engineering · Deterministic workflows
 
 ---
 
-## 🟣 Featured Projects
 
 ### **⟡ GrandmaGames Platform**
 Multi‑game ecosystem with shared UI/UX, modular engines, and audit‑driven refactors.
@@ -109,7 +106,6 @@ Community‑driven recipe platform with structured data and clean editorial tool
 
 ---
 
-## 🟡 Analytics HUD
 
 <div align="center">
 
@@ -121,7 +117,6 @@ Community‑driven recipe platform with structured data and clean editorial tool
 
 ---
 
-## 🟠 Contribution Graph (Pac‑Man Mode)
 
 <div align="center">
 <img src="./pacman-contribution-graph-dark.svg" width="1000">
@@ -129,7 +124,6 @@ Community‑driven recipe platform with structured data and clean editorial tool
 
 ---
 
-## 🟣 Cinematic Footer Loop
 
 <div align="center">
 <img src="assets/cityscapes/skyline-loop.gif" width="1000">
