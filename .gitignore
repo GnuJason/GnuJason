@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS files
+.DS_Store
+
+# Asset pipeline outputs (keep assets/, ignore temp)
+assets/**/*.tmp
+assets/**/*.cache
+
+# Banner frames (optional to ignore)
+assets/banners/banner_frame_*.png
+
+# Logs
+*.log
