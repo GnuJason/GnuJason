@@ -1,0 +1,41 @@
+GIMP Palette
+Name: RetroNES
+Columns: 8
+# GnuJason retro pixel-art theme palette
+# Inspired by NES / Game Boy / arcade colour limits
+#
+# Backgrounds / dark
+  0   0   0 Black
+ 20  15  10 DarkBrown
+ 30  30  80 DarkNavy
+  0  30  10 DarkForest
+ 60   0 100 DarkPurple
+100  30   0 DarkEmber
+# Mid-tones
+ 20  60 160 CobaltBlue
+120   0 200 RoyalPurple
+200  80   0 ForgeOrange
+  0 120  40 TerminalGreen
+180  60   0 BronzeRed
+# Highlights
+240 185 130 SkinTone
+180 230 180 GreenSkin
+240 200  60 Gold
+255 200   0 BrightGold
+  0 220  80 NeonGreen
+  0 200  20 MatrixGreen
+200  40   0 FireRed
+180   0 180 Violet
+255 180   0 Amber
+# Near-whites
+248 248 248 NearWhite
+200 200 200 LightGrey
+# Accent reds / blues
+ 30  20  10 HairBrown
+ 60  20   0 DarkBoot
+  0  80   0 DarkHairGreen
+140  40   0 FireHair
+ 60   0 100 PurpleHair
+  0  60  20 DarkGreenShorts
+ 30   0  50 DarkPurpleBoot
+100  30   0 DarkOrangeShorts

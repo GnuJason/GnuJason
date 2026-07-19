@@ -1,0 +1,10 @@
+{
+  "name": "spratgen_export",
+  "animation": "idle",
+  "loop": true,
+  "frameCount": 1,
+  "width": 400,
+  "height": 400,
+  "keyframes": [{"t": 0, "curve": "easeInOut"}, {"t": 1, "curve": "easeInOut"}],
+  "framePaths": ["idle_frame_000.png"]
+}
