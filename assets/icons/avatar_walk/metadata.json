@@ -1,0 +1,10 @@
+{
+  "name": "spratgen_export",
+  "animation": "walk",
+  "loop": true,
+  "frameCount": 8,
+  "width": 400,
+  "height": 400,
+  "keyframes": [{"t": 0, "curve": "linear"}, {"t": 0.33, "curve": "linear"}, {"t": 0.66, "curve": "linear"}, {"t": 1, "curve": "linear"}],
+  "framePaths": ["walk_frame_000.png", "walk_frame_001.png", "walk_frame_002.png", "walk_frame_003.png", "walk_frame_004.png", "walk_frame_005.png", "walk_frame_006.png", "walk_frame_007.png"]
+}

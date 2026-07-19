@@ -1,0 +1,10 @@
+{
+  "name": "spratgen_export",
+  "animation": "jab",
+  "loop": false,
+  "frameCount": 4,
+  "width": 400,
+  "height": 400,
+  "keyframes": [{"t": 0, "curve": "easeOut"}, {"t": 0.4, "curve": "easeOut"}, {"t": 1, "curve": "easeOut"}],
+  "framePaths": ["jab_frame_000.png", "jab_frame_001.png", "jab_frame_002.png", "jab_frame_003.png"]
+}
