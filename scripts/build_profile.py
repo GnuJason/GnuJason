@@ -420,16 +420,31 @@ def build_footer():
     save_pixel(image, "banners/bunker-footer.png")
 
 
+def build_heritage_stills():
+    for source, destination in (
+        ("animations/ILoveYouHeartGIFbyCarawrrr.gif", "icons/finger-heart.png"),
+        ("animations/KoreanKickingGIFbyTomtomi.gif", "animations/korean-character-still.png"),
+    ):
+        with Image.open(ASSETS / source) as image:
+            image.seek(0)
+            image.convert("RGBA").save(ASSETS / destination)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--still", action="store_true", help="Render only the banner poster for a quick art check")
+    parser.add_argument("--heritage-only", action="store_true", help="Extract stills from the supplied heritage GIFs")
     args = parser.parse_args()
+    if args.heritage_only:
+        build_heritage_stills()
+        return
     build_banner(args.still)
     if not args.still:
         build_interface()
         build_projects()
         build_typing()
         build_footer()
+        build_heritage_stills()
 
 
 if __name__ == "__main__":

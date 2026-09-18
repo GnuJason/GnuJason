@@ -67,12 +67,24 @@ class ProfileTests(unittest.TestCase):
         for attrs in parser.images:
             self.assertIn("alt", attrs)
             self.assertTrue((profile.ROOT / attrs["src"]).is_file(), attrs["src"])
-        self.assertEqual(len(parser.sources), 2)
+        self.assertEqual(len(parser.sources), 3)
         for attrs in parser.sources:
             self.assertEqual(attrs["media"], "(prefers-reduced-motion: reduce)")
             self.assertTrue((profile.ROOT / attrs["srcset"]).is_file())
         for anchor in parser.anchors:
             self.assertIn(anchor, parser.targets)
+
+    def test_heritage_stills(self):
+        for source, destination in (
+            ("animations/ILoveYouHeartGIFbyCarawrrr.gif", "icons/finger-heart.png"),
+            ("animations/KoreanKickingGIFbyTomtomi.gif", "animations/korean-character-still.png"),
+        ):
+            with self.subTest(source=source):
+                with Image.open(profile.ASSETS / source) as original:
+                    with Image.open(profile.ASSETS / destination) as still:
+                        self.assertEqual(still.n_frames, 1)
+                        self.assertEqual(still.size, original.size)
+                        self.assertEqual(still.convert("RGBA").tobytes(), original.convert("RGBA").tobytes())
 
     def test_typing_animation(self):
         with Image.open(profile.ASSETS / "animations/bunker-typing.gif") as image:

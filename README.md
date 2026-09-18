@@ -73,7 +73,7 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
-<h2 id="open-channel"><img src="assets/icons/bunker-signal.png" width="24" height="24" alt=""> 04 / Open Channel</h2>
+<h2 id="open-channel"><img src="assets/icons/finger-heart.png" width="21" height="32" alt="Korean finger heart"> 04 / Open Channel</h2>
 
 Interested in real-time systems, useful automation, or the space between code and art? Explore a repository, open an issue, or bring a pull request.
 
@@ -81,6 +81,13 @@ Interested in real-time systems, useful automation, or the space between code an
   <a href="https://github.com/GnuJason">GitHub / GnuJason</a> &nbsp; • &nbsp;
   <a href="https://github.com/GnuJason?tab=overview#js-contribution-activity">Contribution Log</a> &nbsp; • &nbsp;
   <a href="https://github.com/GnuJason/GnuJason/issues">Start a Conversation</a>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/animations/korean-character-still.png">
+    <img src="assets/animations/KoreanKickingGIFbyTomtomi.gif" width="64" height="64" alt="Taekwondo character wearing the South Korean flag">
+  </picture>
 </p>
 
 <img src="assets/banners/bunker-footer.png" width="100%" alt="End of transmission. GnuJason / Bunker 07.">
