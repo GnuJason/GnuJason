@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <b>Cyberpunk Bunker Engineer • Distributed Systems • Automation Architect</b>
+  <b>Distributed Systems • Automation Architect</b>
 </p>
 
 <div align="center">
