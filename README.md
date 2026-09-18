@@ -26,15 +26,13 @@
 
 <h2 id="operator-log"><img src="assets/icons/bunker-terminal.png" width="24" height="24" alt=""> 01 / Operator Log</h2>
 
-I'm Jason. I build tools that turn complex systems into something you can see, understand, and work with: real-time telemetry, open-data visualizations, command-line utilities, and pixel-art tooling.
-
-My interests live where **distributed systems**, **automation**, and **creative engineering** meet. Terminal-first when it makes sense. Visual when it makes a difference.
+Hi I'm Jason — My focus is software engineering and web development, but specifically the kind that turns raw systems into living, observable platforms — full‑stack applications, backend automation pipelines, real‑time data flows, and the infrastructure that keeps them running. I build the tools, the APIs, the telemetry, and the interfaces that make complex systems usable, visual, and alive.
 
 ```text
 operator  : GnuJason
 sector    : software engineering
-focus     : distributed systems / automation
-workbench : telemetry / open data / developer tools
+focus     : software / web development
+workbench : API‑driven content systems / automation scripts / data refresh pipelines / production‑ready web apps
 ```
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
@@ -69,7 +67,7 @@ workbench : telemetry / open data / developer tools
   <img src="assets/ui-elements/badge-git.png" height="30" alt="Git">
 </p>
 
-**Systems & tools** · C, C++, Python, Linux, Git, CMake
+**Systems & tools** · Java, C, C++, Python, Linux, Git, 
 
 **Interfaces & data** · TypeScript, React, D3, FastAPI, WebSockets
 
