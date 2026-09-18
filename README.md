@@ -6,6 +6,13 @@
 <h1 align="center">GnuJason — Software Engineer</h1>
 
 <p align="center">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/animations/korean-character-still.png">
+    <img src="assets/animations/KoreanKickingGIFbyTomtomi.gif" width="48" height="48" alt="Taekwondo character wearing the South Korean flag">
+  </picture>
+</p>
+
+<p align="center">
   <b>Cyberpunk Bunker Engineer • Distributed Systems • Automation Architect</b>
 </p>
 
@@ -81,13 +88,6 @@ Interested in real-time systems, useful automation, or the space between code an
   <a href="https://github.com/GnuJason">GitHub / GnuJason</a> &nbsp; • &nbsp;
   <a href="https://github.com/GnuJason?tab=overview#js-contribution-activity">Contribution Log</a> &nbsp; • &nbsp;
   <a href="https://github.com/GnuJason/GnuJason/issues">Start a Conversation</a>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/animations/korean-character-still.png">
-    <img src="assets/animations/KoreanKickingGIFbyTomtomi.gif" width="64" height="64" alt="Taekwondo character wearing the South Korean flag">
-  </picture>
 </p>
 
 <img src="assets/banners/bunker-footer.png" width="100%" alt="End of transmission. GnuJason / Bunker 07.">
