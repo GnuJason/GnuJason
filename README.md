@@ -90,10 +90,10 @@ Interested in real-time systems, useful automation, or the space between code an
   <a href="https://github.com/GnuJason/GnuJason/issues">Start a Conversation</a>
 </p>
 
-<img src="assets/banners/bunker-footer.png" width="100%" alt="End of transmission. GnuJason / Bunker 07.">
-
 <div align="left">
   <a href="https://www.opensuse.org">
     <img src="assets/opensuse/opensuse-pixel.png" width="100%" alt="openSUSE / Built in the open. Purple pixel lizard and neon circuitry across the bunker footer.">
   </a>
 </div>
+
+<img src="assets/banners/bunker-footer.png" width="100%" alt="End of transmission. GnuJason / Bunker 07.">

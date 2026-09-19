@@ -95,7 +95,8 @@ class ProfileTests(unittest.TestCase):
         self.assertEqual(badge["width"], "100%")
         self.assertNotIn("height", badge)
         self.assertIn('href="https://www.opensuse.org"', readme)
-        self.assertGreater(readme.index(badge["src"]), readme.index("assets/banners/bunker-footer.png"))
+        self.assertLess(readme.index(badge["src"]), readme.index("assets/banners/bunker-footer.png"))
+        self.assertEqual(parser.images[-1]["src"], "assets/banners/bunker-footer.png")
 
     def test_heritage_stills(self):
         for source, destination in (
