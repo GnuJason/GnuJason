@@ -18,6 +18,13 @@ python3 -m venv /tmp/gnujason-profile-venv
 Use `--still` for a fast banner composition check. A full build is required
 afterward to update the GIF and supporting assets. Rendering is deterministic.
 
+Use `--opensuse-only` to rebuild just the 1500 x 224 dedication strip from the
+supplied `assets/icons/openSUSW_lizard.png`. The renderer isolates the lizard,
+uses the profile purple with cyan and pink circuitry on near-black, and
+enlarges a 750 x 112 raster exactly 2x with nearest-neighbor sampling. The
+README places it full-width below the transmission banner, scales its height
+proportionally on mobile, and links to the main openSUSE site.
+
 ## Art Direction
 
 - Hero: 3000 x 1000, a 750 x 250 pixel scene enlarged exactly 4x.

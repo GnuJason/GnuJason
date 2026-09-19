@@ -74,6 +74,29 @@ class ProfileTests(unittest.TestCase):
         for anchor in parser.anchors:
             self.assertIn(anchor, parser.targets)
 
+    def test_opensuse_badge(self):
+        expected = profile.opensuse_badge()
+        self.assertEqual(expected.size, (750, 112))
+        self.assertEqual(expected.tobytes(), profile.opensuse_badge().tobytes())
+        self.assertIn((171, 133, 239), {color for count, color in expected.getcolors()})
+        for region in ((17, 18, 167, 89), (188, 29, 426, 97), (462, 17, 738, 95)):
+            with self.subTest(region=region):
+                self.assertGreater(len(expected.crop(region).getcolors()), 3)
+        with Image.open(profile.ASSETS / "opensuse/opensuse-pixel.png") as image:
+            self.assertEqual(image.size, (1500, 224))
+            self.assertEqual(image.n_frames, 1)
+            self.assertEqual(image.convert("RGB").tobytes(),
+                             expected.resize((1500, 224), Image.Resampling.NEAREST).tobytes())
+        readme = (profile.ROOT / "README.md").read_text()
+        parser = ReadmeImages()
+        parser.feed(readme)
+        badge = next(attrs for attrs in parser.images
+                     if attrs["src"] == "assets/opensuse/opensuse-pixel.png")
+        self.assertEqual(badge["width"], "100%")
+        self.assertNotIn("height", badge)
+        self.assertIn('href="https://www.opensuse.org"', readme)
+        self.assertGreater(readme.index(badge["src"]), readme.index("assets/banners/bunker-footer.png"))
+
     def test_heritage_stills(self):
         for source, destination in (
             ("animations/ILoveYouHeartGIFbyCarawrrr.gif", "icons/finger-heart.png"),

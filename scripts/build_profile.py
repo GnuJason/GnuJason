@@ -420,6 +420,59 @@ def build_footer():
     save_pixel(image, "banners/bunker-footer.png")
 
 
+def opensuse_badge():
+    with Image.open(ASSETS / "icons/openSUSW_lizard.png") as source:
+        red, green, blue = source.convert("RGB").split()
+        mask = ImageChops.subtract(green, red).point(lambda value: 255 if value > 25 else 0)
+    bounds = mask.getbbox()
+    if bounds is None:
+        raise ValueError("The openSUSE source must contain a green lizard")
+    top = bounds[1]
+    left = mask.crop((0, top, mask.width, top + 1)).getbbox()[0]
+    ImageDraw.floodfill(mask, (left, top), 128)
+    mask = mask.point(lambda value: 255 if value == 128 else 0)
+    mask = mask.crop(mask.getbbox())
+    mask.thumbnail((132, 70), Image.Resampling.NEAREST)
+    image = Image.new("RGB", (750, 112), INK)
+    draw = ImageDraw.Draw(image)
+    for top in range(4, 108, 4):
+        draw.line((0, top, 749, top), fill="#151122")
+    for left in range(12, 750, 24):
+        draw.line((left, 100, left + 8, 92), fill="#30243f")
+    draw.line((0, 1, 170, 1, 180, 11, 455, 11, 465, 1, 749, 1), fill="#614883")
+    draw.line((0, 110, 470, 110, 480, 100, 710, 100, 720, 110, 749, 110), fill="#614883")
+    draw.line((0, 1, 70, 1), fill=PURPLE, width=2)
+    draw.line((680, 110, 749, 110), fill=PINK, width=2)
+    for index in range(6):
+        start = 22 + index * 13
+        bend = 505 + index * 20
+        end = 17 + index * 15
+        draw.line((462, start, bend, start, bend + 14, end, 736, end),
+                  fill="#614883" if index % 2 else "#39294f")
+        draw.rectangle((733, end - 2, 737, end + 2), outline=PURPLE)
+        pulse = 615 + index * 15
+        draw.line((pulse, end, pulse + 12, end), fill=CYAN if index == 2 else PURPLE)
+    draw.line((17, 28, 17, 18, 40, 18), fill=CYAN)
+    draw.line((144, 88, 166, 88, 166, 78), fill=PINK)
+    position = (27, (112 - mask.height) // 2)
+    image.paste("#493263", (position[0] + 3, position[1] + 2), mask)
+    lizard = Image.new("RGB", mask.size, PURPLE)
+    lizard_draw = ImageDraw.Draw(lizard)
+    for top in range(3, mask.height, 6):
+        lizard_draw.line((0, top, mask.width, top), fill="#9570d4")
+    image.paste(lizard, position, mask)
+    text(draw, (191, 31), "OPENSUSE", "#493263", 5)
+    text(draw, (188, 29), "OPENSUSE", PURPLE, 5)
+    draw.line((188, 72, 260, 72), fill=CYAN)
+    draw.line((267, 72, 425, 72), fill="#614883")
+    text(draw, (188, 83), "BUILT IN THE OPEN", MUTED, 2)
+    return image
+
+
+def build_opensuse():
+    save_pixel(opensuse_badge(), "opensuse/opensuse-pixel.png")
+
+
 def build_heritage_stills():
     for source, destination in (
         ("animations/ILoveYouHeartGIFbyCarawrrr.gif", "icons/finger-heart.png"),
@@ -434,7 +487,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--still", action="store_true", help="Render only the banner poster for a quick art check")
     parser.add_argument("--heritage-only", action="store_true", help="Extract stills from the supplied heritage GIFs")
+    parser.add_argument("--opensuse-only", action="store_true", help="Render only the openSUSE dedication badge")
     args = parser.parse_args()
+    if args.opensuse_only:
+        build_opensuse()
+        return
     if args.heritage_only:
         build_heritage_stills()
         return
@@ -445,6 +502,7 @@ def main():
         build_typing()
         build_footer()
         build_heritage_stills()
+        build_opensuse()
 
 
 if __name__ == "__main__":
