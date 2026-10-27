@@ -2,7 +2,9 @@
 
 from html.parser import HTMLParser
 import unittest
+from unittest.mock import patch
 
+import markdown
 from PIL import Image, ImageChops, ImageSequence
 
 import build_cofc
@@ -16,6 +18,8 @@ class ReadmeImages(HTMLParser):
         self.sources = []
         self.anchors = []
         self.targets = set()
+        self.headings = []
+        self.target_elements = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -27,6 +31,9 @@ class ReadmeImages(HTMLParser):
             self.anchors.append(attrs["href"][1:])
         if "id" in attrs:
             self.targets.add(attrs["id"])
+            self.target_elements.append((tag, attrs))
+        if tag in ("h1", "h2", "h3", "h4", "h5", "h6"):
+            self.headings.append(tag)
 
 
 class ProfileTests(unittest.TestCase):
@@ -154,14 +161,41 @@ class ProfileTests(unittest.TestCase):
         self.assertNotIn("height", image)
         for description in ("Jason", "Charleston", "courtyard", "workstation"):
             self.assertIn(description, image["alt"])
-        headings = ("operator-log", "college-of-charleston", "project-bays",
-                    "toolchain", "open-channel")
-        positions = [readme.index(f'<h2 id="{heading}">') for heading in headings]
+        anchors = ("operator-log", "college-of-charleston", "project-bays",
+                   "toolchain", "open-channel")
+        positions = [readme.index(f'id="{anchor}"') for anchor in anchors]
         self.assertEqual(positions, sorted(positions))
-        for number, (start, end) in enumerate(zip(positions, positions[1:] + [len(readme)]), 1):
-            self.assertIn(f"0{number} / ", readme[start:readme.index("</h2>", start)])
         self.assertLess(positions[1], readme.index(image["src"]))
         self.assertLess(readme.index(image["src"]), positions[2])
+        self.assertIn("College of Charleston · Software Engineering / Computer Science · "
+                      "Charleston, South Carolina", readme)
+
+    def test_invisible_section_anchors(self):
+        readme = (profile.ROOT / "README.md").read_text()
+        rendered = markdown.markdown(readme, extensions=["fenced_code"])
+        parser = ReadmeImages()
+        parser.feed(rendered)
+        self.assertEqual(parser.headings, ["h1"])
+        self.assertEqual(parser.target_elements, [
+            ("a", {"id": "operator-log"}),
+            ("p", {"id": "college-of-charleston", "align": "center"}),
+            ("p", {"id": "project-bays", "align": "center"}),
+            ("p", {"id": "toolchain", "align": "center"}),
+            ("a", {"id": "open-channel"}),
+        ])
+        self.assertNotRegex(rendered, r'<p>\s*<a id="[^"]+"></a>\s*</p>')
+        self.assertNotRegex(readme, r"0[1-5] / (Operator Log|College of Charleston|"
+                           r"Project Bays|Toolchain|Open Channel)")
+        self.assertFalse(any(attrs["src"].startswith("assets/icons/") for attrs in parser.images))
+        for anchor in parser.anchors:
+            self.assertIn(anchor, parser.targets)
+
+    def test_cofc_environment_replaces_title(self):
+        with patch("build_cofc.text", wraps=build_cofc.text) as labels:
+            image = build_cofc.montage()
+        for call in labels.call_args_list:
+            self.assertNotIn("COLLEGE OF CHARLESTON", call.args[2].upper())
+        self.assertGreater(len(image.crop((20, 23, 260, 43)).getcolors(4800)), 8)
 
 
 if __name__ == "__main__":

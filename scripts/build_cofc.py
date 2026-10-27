@@ -178,13 +178,31 @@ def montage():
     image = bloom(image, lights)
     draw = ImageDraw.Draw(image)
 
-    draw.rectangle((0, 0, 749, 43), fill=INK)
+    # Extend the canopy and night sky into the former title band.
+    for y in range(44):
+        blend = max(0, y - 16) / 179
+        draw.line((0, y, 398, y),
+                  fill=(23 + int(13 * blend), 19 + int(5 * blend), 41 + int(14 * blend)))
+    crown = random.Random(1771)
+    for _ in range(55):
+        x, y = crown.randrange(175, 389), crown.randrange(16, 43)
+        draw.point((x, y), fill=crown.choice(("#453553", "#56405e", "#29253f")))
+    for x, y, width in ((183, 26, 47), (211, 29, 65), (308, 19, 51), (328, 22, 38)):
+        draw.line((x, y, x + width, y), fill="#30253f")
+    draw.line((16, 57, 48, 36, 82, 34, 111, 44), fill="#0c131d", width=4)
+    for _ in range(150):
+        x = crown.randrange(0, 165)
+        y = crown.randrange(25, 50) + abs(x - 70) // 14
+        draw.rectangle((x, y, x + crown.randrange(4, 17), y + crown.randrange(2, 6)),
+                       fill=crown.choice(("#111d28", "#192633", "#22303c", "#2d3447")))
+    draw.rectangle((399, 0, 749, 43), fill=INK)
+    draw.line((395, 14, 395, 46), fill="#715172", width=2)
+    for y in (18, 38):
+        draw.line((405, y, 423, y, 429, y + 4, 738, y + 4), fill="#30243f")
     draw.line((0, 1, 170, 1, 181, 12, 573, 12, 584, 1, 749, 1), fill="#614883")
     draw.line((0, 1, 62, 1), fill=PURPLE, width=2)
-    text(draw, (20, 23), "COLLEGE OF CHARLESTON", WHITE, 2)
     text(draw, (445, 27), "CHARLESTON / SOUTH CAROLINA", MUTED)
     draw.rectangle((720, 27, 724, 31), fill=GOLD)
-    draw.line((20, 42, 260, 42), fill="#735579")
     draw.rectangle((0, 237, 749, 249), fill=INK)
     text(draw, (20, 240), "SOFTWARE ENGINEERING / COMPUTER SCIENCE", MUTED)
     text(draw, (610, 240), "GNUJASON / 07", PURPLE)

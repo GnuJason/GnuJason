@@ -31,8 +31,7 @@
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
-<h2 id="operator-log"><img src="assets/icons/bunker-terminal.png" width="24" height="24" alt=""> 01 / Operator Log</h2>
-
+<a id="operator-log"></a>
 Hi I'm Jason — My focus is software engineering and web development, but specifically the kind that turns raw systems into living, observable platforms — full‑stack applications, backend automation pipelines, real‑time data flows, and the infrastructure that keeps them running. I build the tools, the APIs, the telemetry, and the interfaces that make complex systems usable, visual, and alive.
 
 ```text
@@ -44,9 +43,7 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
-<h2 id="college-of-charleston"><img src="assets/icons/bunker-terminal.png" width="24" height="24" alt=""> 02 / College of Charleston</h2>
-
-<p align="center">
+<p id="college-of-charleston" align="center">
   <img src="assets/cofc/cofc-montage.png" width="100%" alt="Jason's College of Charleston connection in pixel art: gold-lit Charleston brick buildings and an oak-shaded collegiate courtyard transition into his purple-neon engineering workstation in Bunker 07.">
 </p>
 
@@ -54,9 +51,7 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
-<h2 id="project-bays"><img src="assets/icons/bunker-projects.png" width="24" height="24" alt=""> 03 / Project Bays</h2>
-
-<p align="center">
+<p id="project-bays" align="center">
   <a href="https://github.com/GnuJason/F1"><img src="assets/ui-elements/project-f1.png" width="390" alt="F1: real-time system telemetry inspired by a Formula 1 pit wall. Python, FastAPI, React. Open repository."></a>
   <a href="https://github.com/GnuJason/geome"><img src="assets/ui-elements/project-geome.png" width="390" alt="geome: a lightweight C command-line tool for geolocation and network metadata. Open repository."></a>
   <a href="https://github.com/GnuJason/Pulse-of-Humanity"><img src="assets/ui-elements/project-pulse.png" width="390" alt="Pulse of Humanity: real-time global population visualization powered by open data and deterministic simulation. Open repository."></a>
@@ -71,9 +66,7 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
-<h2 id="toolchain"><img src="assets/icons/bunker-stack.png" width="24" height="24" alt=""> 04 / Toolchain</h2>
-
-<p align="center">
+<p id="toolchain" align="center">
   <img src="assets/ui-elements/badge-c-cpp.png" height="30" alt="C / C++">
   <img src="assets/ui-elements/badge-python.png" height="30" alt="Python">
   <img src="assets/ui-elements/badge-typescript.png" height="30" alt="TypeScript">
@@ -90,8 +83,7 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
-<h2 id="open-channel"><img src="assets/icons/finger-heart.png" width="21" height="32" alt="Korean finger heart"> 05 / Open Channel</h2>
-
+<a id="open-channel"></a>
 Interested in real-time systems, useful automation, or the space between code and art? Explore a repository, open an issue, or bring a pull request.
 
 <p align="center">

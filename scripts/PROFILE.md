@@ -45,6 +45,12 @@ small stone highlights, and indicators; the purple/near-black world remains
 dominant. The opaque PNG works on light and dark pages, needs no motion
 fallback, and is displayed at full width with proportional height.
 
+The montage has no large college title: its upper canopy and night-sky detail
+flow into the existing courtyard. The small academic line below identifies
+the college. README sections use invisible explicit anchors within their
+content rather than visible heading/icon rows; existing pixel dividers provide
+separation without additional heading underlines or spacer containers.
+
 ### Existing artwork
 
 - Hero: 3000 x 1000, a 750 x 250 pixel scene enlarged exactly 4x.
