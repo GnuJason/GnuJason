@@ -27,6 +27,26 @@ proportionally on mobile, and links to the main openSUSE site.
 
 ## Art Direction
 
+### College of Charleston panorama
+
+The static `assets/cofc/cofc-montage.png` sits between Operator Log and
+Project Bays. Rebuild only this asset with the same environment:
+
+```sh
+/tmp/gnujason-profile-venv/bin/python scripts/build_cofc.py
+```
+
+It uses the hero's 750 x 250 raster enlarged exactly 4x to 3000 x 1000,
+shared pixel font, palette, bloom, and engineer/workstation drawing. Charleston
+brick piazzas, an oak canopy, and a Randolph Hall-inspired portico with paired
+stairs lead into the bunker. This is a stylized architectural reference, not
+an official college logo or seal. Gold is confined to window light, lanterns,
+small stone highlights, and indicators; the purple/near-black world remains
+dominant. The opaque PNG works on light and dark pages, needs no motion
+fallback, and is displayed at full width with proportional height.
+
+### Existing artwork
+
 - Hero: 3000 x 1000, a 750 x 250 pixel scene enlarged exactly 4x.
 - Animation: 40 frames at 100 ms, four seconds, infinite loop.
 - Palette: graphite bunker walls, purple ambient light, cyan and magenta neon.

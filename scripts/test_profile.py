@@ -5,6 +5,7 @@ import unittest
 
 from PIL import Image, ImageChops, ImageSequence
 
+import build_cofc
 import build_profile as profile
 
 
@@ -121,6 +122,46 @@ class ProfileTests(unittest.TestCase):
         for name in ("f1", "geome", "pulse", "spratforge"):
             with Image.open(profile.ASSETS / f"ui-elements/project-{name}.png") as image:
                 self.assertEqual(image.size, (800, 400))
+
+    def test_cofc_montage(self):
+        expected = build_cofc.montage()
+        self.assertEqual(expected.size, (750, 250))
+        self.assertEqual(expected.tobytes(), build_cofc.montage().tobytes())
+        path = profile.ASSETS / "cofc/cofc-montage.png"
+        with Image.open(path) as image:
+            self.assertEqual(image.size, (3000, 1000))
+            self.assertEqual(image.mode, "RGB")
+            self.assertEqual(image.n_frames, 1)
+            self.assertEqual(image.tobytes(),
+                             expected.resize(image.size, Image.Resampling.NEAREST).tobytes())
+        self.assertLess(path.stat().st_size, 1024 * 1024)
+        colors = expected.getcolors(expected.width * expected.height)
+        gold = sum(count for count, (r, g, b) in colors
+                   if r > 100 and r > g > b and g > b * 1.2)
+        self.assertGreater(gold, 0)
+        self.assertLess(gold / (expected.width * expected.height), 0.05)
+        for region in ((0, 44, 175, 235), (175, 44, 395, 235), (395, 44, 750, 235)):
+            with self.subTest(region=region):
+                self.assertGreater(len(expected.crop(region).getcolors(750 * 250)), 20)
+
+    def test_cofc_placement(self):
+        readme = (profile.ROOT / "README.md").read_text()
+        parser = ReadmeImages()
+        parser.feed(readme)
+        image = next(attrs for attrs in parser.images
+                     if attrs["src"] == "assets/cofc/cofc-montage.png")
+        self.assertEqual(image["width"], "100%")
+        self.assertNotIn("height", image)
+        for description in ("Jason", "Charleston", "courtyard", "workstation"):
+            self.assertIn(description, image["alt"])
+        headings = ("operator-log", "college-of-charleston", "project-bays",
+                    "toolchain", "open-channel")
+        positions = [readme.index(f'<h2 id="{heading}">') for heading in headings]
+        self.assertEqual(positions, sorted(positions))
+        for number, (start, end) in enumerate(zip(positions, positions[1:] + [len(readme)]), 1):
+            self.assertIn(f"0{number} / ", readme[start:readme.index("</h2>", start)])
+        self.assertLess(positions[1], readme.index(image["src"]))
+        self.assertLess(readme.index(image["src"]), positions[2])
 
 
 if __name__ == "__main__":

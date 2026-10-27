@@ -44,7 +44,17 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
-<h2 id="project-bays"><img src="assets/icons/bunker-projects.png" width="24" height="24" alt=""> 02 / Project Bays</h2>
+<h2 id="college-of-charleston"><img src="assets/icons/bunker-terminal.png" width="24" height="24" alt=""> 02 / College of Charleston</h2>
+
+<p align="center">
+  <img src="assets/cofc/cofc-montage.png" width="100%" alt="Jason's College of Charleston connection in pixel art: gold-lit Charleston brick buildings and an oak-shaded collegiate courtyard transition into his purple-neon engineering workstation in Bunker 07.">
+</p>
+
+<p align="center">College of Charleston · Software Engineering / Computer Science · Charleston, South Carolina</p>
+
+<img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
+
+<h2 id="project-bays"><img src="assets/icons/bunker-projects.png" width="24" height="24" alt=""> 03 / Project Bays</h2>
 
 <p align="center">
   <a href="https://github.com/GnuJason/F1"><img src="assets/ui-elements/project-f1.png" width="390" alt="F1: real-time system telemetry inspired by a Formula 1 pit wall. Python, FastAPI, React. Open repository."></a>
@@ -61,7 +71,7 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
-<h2 id="toolchain"><img src="assets/icons/bunker-stack.png" width="24" height="24" alt=""> 03 / Toolchain</h2>
+<h2 id="toolchain"><img src="assets/icons/bunker-stack.png" width="24" height="24" alt=""> 04 / Toolchain</h2>
 
 <p align="center">
   <img src="assets/ui-elements/badge-c-cpp.png" height="30" alt="C / C++">
@@ -80,7 +90,7 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
-<h2 id="open-channel"><img src="assets/icons/finger-heart.png" width="21" height="32" alt="Korean finger heart"> 04 / Open Channel</h2>
+<h2 id="open-channel"><img src="assets/icons/finger-heart.png" width="21" height="32" alt="Korean finger heart"> 05 / Open Channel</h2>
 
 Interested in real-time systems, useful automation, or the space between code and art? Explore a repository, open an issue, or bring a pull request.
 
