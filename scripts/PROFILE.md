@@ -37,17 +37,22 @@ Project Bays. Rebuild only this asset with the same environment:
 ```
 
 It uses the hero's 750 x 250 raster enlarged exactly 4x to 3000 x 1000,
-shared pixel font, palette, bloom, and engineer/workstation drawing. Charleston
-brick piazzas, an oak canopy, and a Randolph Hall-inspired portico with paired
-stairs lead into the bunker. This is a stylized architectural reference, not
+shared pixel font, palette, and bloom. Charleston brick piazzas, an oak canopy,
+and a Randolph Hall-inspired portico with paired stairs retain their original
+geometry. New lower-roofed brick buildings, a garden gate, walkway, benches,
+lamps, and a second oak extend the campus across the former workstation area.
+There is no person/computer scene, indoor bay, or large HUD panel in this asset;
+the bunker connection is expressed through subtle ground circuitry and cyan/
+purple environmental lighting. No buildings are stretched to fill the width.
+This is a stylized architectural reference, not
 an official college logo or seal. Gold is confined to window light, lanterns,
 small stone highlights, and indicators; the purple/near-black world remains
 dominant. The opaque PNG works on light and dark pages, needs no motion
 fallback, and is displayed at full width with proportional height.
 
-The montage has no large college title: its upper canopy and night-sky detail
-flow into the existing courtyard. The small academic line below identifies
-the college. README sections use invisible explicit anchors within their
+The montage has no large college title: its canopy and uninterrupted night sky
+flow across the courtyard, without a separate title band. The small academic
+line below identifies the college. README sections use invisible explicit anchors within their
 content rather than visible heading/icon rows; existing pixel dividers provide
 separation without additional heading underlines or spacer containers.
 

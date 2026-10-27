@@ -44,7 +44,7 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
 <p id="college-of-charleston" align="center">
-  <img src="assets/cofc/cofc-montage.png" width="100%" alt="Jason's College of Charleston connection in pixel art: gold-lit Charleston brick buildings and an oak-shaded collegiate courtyard transition into his purple-neon engineering workstation in Bunker 07.">
+  <img src="assets/cofc/cofc-montage.png" width="100%" alt="Jason's College of Charleston connection in pixel art: a columned campus building, gold-lit historic brick façades, oak trees, lamps, and a garden walkway span a continuous nighttime courtyard with subtle cyan and purple circuitry.">
 </p>
 
 <p align="center">College of Charleston · Software Engineering / Computer Science · Charleston, South Carolina</p>

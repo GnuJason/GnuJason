@@ -1,10 +1,10 @@
-"""Render the Charleston courtyard-to-bunker panorama without changing other art."""
+"""Render the full-width Charleston campus panorama without changing other art."""
 
 import random
 
 from PIL import Image, ImageDraw
 
-from build_profile import CYAN, INK, MUTED, PINK, PURPLE, WHITE, bloom, save_pixel, text, workstation
+from build_profile import CYAN, INK, MUTED, PINK, PURPLE, bloom, save_pixel, text
 
 
 GOLD = "#d5ad62"
@@ -17,7 +17,7 @@ def montage():
     glow = ImageDraw.Draw(lights)
     rng = random.Random(1770)
 
-    # One continuous night sky and courtyard, becoming the bunker floor.
+    # One continuous night sky and courtyard across the original pixel grid.
     for top in range(16, 195):
         blend = (top - 16) / 179
         draw.line((0, top, 749, top),
@@ -133,7 +133,94 @@ def montage():
         draw.point((x, 183), fill="#90748c")
     draw.line((0, 190, 177, 190), fill="#544158")
     draw.line((0, 203, 177, 203), fill="#544158")
-    for x in (167, 382):
+    # Extend the campus at its original scale, with lower roofs behind the portico.
+    garden = random.Random(1772)
+    for x, top, width in ((408, 113, 51), (506, 121, 67), (556, 116, 59), (699, 126, 50)):
+        draw.rectangle((x, top, x + width, 188), fill="#1b192e")
+        draw.polygon(((x - 3, top), (x + 12, top - 11),
+                      (x + width - 9, top - 11), (x + width + 3, top)), fill="#211c32")
+        for wx in range(x + 8, x + width - 5, 15):
+            for wy in range(top + 10, 178, 20):
+                draw.rectangle((wx, wy, wx + 4, wy + 7), fill="#6c5551")
+
+    draw.polygon(((546, 171), (575, 171), (649, 236), (450, 236)), fill="#211b2c")
+    draw.line((546, 171, 450, 236), fill="#65506b")
+    draw.line((575, 171, 649, 236), fill="#4d415e")
+    for y, left, right in ((183, 529, 588), (196, 510, 604), (212, 486, 622), (231, 458, 644)):
+        draw.line((left, y, right, y), fill="#44334c")
+        for x in range(left + 8, right, 16):
+            draw.line((x, y - 3, x + 3, y), fill="#36283f")
+
+    for left, top, right in ((405, 116, 526), (590, 109, 716)):
+        draw.rectangle((left, top, right, 183), fill="#352638", outline="#604052")
+        for y in range(top + 4, 182, 5):
+            draw.line((left + 1, y, right - 1, y), fill="#282133")
+            for x in range(left + 3 + (y % 2) * 6, right, 13):
+                draw.line((x, y - 3, x, y), fill="#493346")
+        draw.polygon(((left - 5, top), (left + 15, top - 18),
+                      (right - 14, top - 18), (right + 5, top)), fill="#211c30")
+        draw.line((left + 15, top - 18, right - 14, top - 18), fill="#58415e")
+        draw.line((left - 4, top, right + 4, top), fill="#876880", width=2)
+        draw.line((left - 2, top + 3, right + 2, top + 3), fill="#4f3d54")
+        for x in (left + 21, right - 24):
+            draw.rectangle((x, top - 26, x + 7, top - 13), fill="#483044")
+            draw.line((x - 1, top - 27, x + 8, top - 27), fill="#826072", width=2)
+        for x in range(left + 10, right - 10, 25):
+            for y in (top + 12, top + 39):
+                draw.rectangle((x - 2, y - 2, x + 12, y + 20), fill="#151725", outline="#665269")
+                draw.rectangle((x + 1, y, x + 9, y + 17), fill="#b68e53")
+                glow.rectangle((x + 3, y + 2, x + 7, y + 15), fill="#432d18")
+                draw.line((x + 5, y, x + 5, y + 18), fill="#3c2c3c")
+                draw.line((x, y + 8, x + 10, y + 8), fill="#3c2c3c")
+                draw.line((x - 3, y + 21, x + 13, y + 21), fill="#8b7182")
+        draw.line((left, top + 36, right, top + 36), fill="#6a5167")
+        draw.rectangle((left - 3, 184, right + 3, 187), fill="#504056")
+        draw.line((left - 3, 184, right + 3, 184), fill="#897188")
+
+    # A recessed garden gate and modest electronics replace the indoor workstation.
+    draw.rectangle((548, 148, 571, 173), fill="#0c111e")
+    draw.arc((547, 134, 572, 163), 180, 360, fill="#745c75", width=2)
+    for x in range(551, 571, 4):
+        draw.line((x, 148, x, 172), fill="#51435e")
+    draw.line((549, 155, 570, 155), fill="#80708a")
+    draw.rectangle((532, 158, 537, 168), fill="#222637", outline="#665775")
+    draw.line((533, 160, 536, 160), fill=CYAN)
+    draw.point((534, 165), fill=PURPLE)
+    draw.line((595, 113, 615, 113), fill="#69558b")
+    draw.line((677, 113, 700, 113), fill="#478a94")
+    glow.line((677, 113, 700, 113), fill="#153d48")
+
+    for left, right in ((398, 476), (615, 680), (707, 749)):
+        draw.polygon(((left, 191), (right - 10, 191), (right, 201), (left - 5, 201)),
+                     fill="#121c28", outline="#303442")
+        for _ in range(38):
+            x, y = garden.randrange(left, right), garden.randrange(182, 196)
+            draw.rectangle((x, y, x + garden.randrange(2, 6), y + 3),
+                           fill=garden.choice(("#172735", "#21313c", "#2c3546")))
+        draw.line((left - 5, 202, right, 202), fill="#57405f")
+    for x in (455, 631):
+        draw.polygon(((x, 190), (x + 29, 190), (x + 33, 194), (x - 3, 194)), fill="#48334b")
+        draw.line((x, 183, x + 28, 183), fill="#796078", width=2)
+        draw.line((x, 187, x + 28, 187), fill="#614b65")
+        for leg in (x + 1, x + 27):
+            draw.line((leg, 184, leg, 201), fill="#514658", width=2)
+
+    draw.polygon(((695, 208), (710, 208), (706, 163), (718, 116),
+                  (713, 101), (700, 143), (688, 117), (681, 112), (695, 163)),
+                 fill="#0c131d")
+    draw.line((702, 199, 700, 163, 711, 121), fill="#36404c", width=2)
+    draw.line((702, 145, 675, 116, 649, 108), fill="#0c131d", width=5)
+    draw.line((713, 123, 738, 106, 749, 84), fill="#0c131d", width=4)
+    for _ in range(170):
+        x = garden.randrange(640, 750)
+        y = garden.randrange(58, 103) + abs(x - 706) // 5
+        draw.rectangle((x, y, x + garden.randrange(4, 13), y + garden.randrange(2, 6)),
+                       fill=garden.choice(("#101c28", "#172633", "#22303c", "#293247")))
+    for x, y in ((655, 110), (678, 108), (727, 109), (744, 105)):
+        draw.line((x, y, x - 1, y + 12, x + 2, y + 16), fill="#414957")
+        draw.line((x + 3, y, x + 3, y + 7), fill="#2f3c48")
+
+    for x in (167, 382, 540, 580, 732):
         draw.rectangle((x - 1, 163, x + 1, 204), fill="#625266")
         draw.rectangle((x - 5, 153, x + 5, 164), fill="#322838", outline="#99816a")
         draw.rectangle((x - 3, 155, x + 3, 161), fill=GOLD)
@@ -146,42 +233,21 @@ def montage():
         x, y = rng.randrange(390), rng.randrange(197, 235)
         draw.point((x, y), fill=rng.choice(("#251f33", "#37283d", "#463147")))
 
-    # The same engineer and electronics as the hero inhabit the adjoining bay.
-    draw.rectangle((399, 47, 749, 195), fill="#171326")
-    for y in range(48, 194, 37):
-        for x in range(403, 750, 68):
-            draw.rectangle((x, y, x + 63, y + 32), fill="#1b172c", outline="#292037")
-            draw.point((x + 4, y + 4), fill="#594366")
-    draw.line((396, 47, 396, 182, 414, 197), fill="#0d0e19", width=9)
-    draw.line((395, 47, 395, 181, 414, 198), fill="#715172", width=2)
-    for y in (57, 98, 141):
-        draw.rectangle((389, y, 401, y + 4), fill="#32283e", outline="#594366")
-    draw.rectangle((426, 58, 657, 92), fill="#0c101c", outline="#584162")
-    text(draw, (437, 67), "JASON / ENGINEERING", WHITE)
-    text(draw, (437, 81), "> CAMPUS TO BUNKER_07", PURPLE)
-    draw.line((431, 54, 575, 54), fill=PURPLE)
-    glow.line((431, 54, 575, 54), fill="#694b9b", width=2)
-    for index in range(4):
-        y = 62 + index * 8
-        draw.line((668, y, 690 + index * 8, y, 701 + index * 8, y + 8, 739, y + 8),
-                  fill="#614883")
-        draw.rectangle((736, y + 6, 740, y + 10), outline=PINK if index % 2 else PURPLE)
-    for x in (405, 675, 711):
-        draw.rectangle((x, 107, x + 29, 201), fill="#0b101c", outline="#46324f", width=2)
-        for y in range(113, 196, 13):
-            draw.rectangle((x + 4, y, x + 25, y + 9), fill="#1d2032", outline="#373347")
-            draw.line((x + 7, y + 3, x + 17, y + 3), fill="#565269")
-    workstation(draw, lights, 0)
-    for x, color in ((280, "#776144"), (324, "#7f587f"), (370, "#815cb2"), (416, "#478a94")):
+    for _ in range(220):
+        x, y = garden.randrange(395, 750), garden.randrange(204, 235)
+        draw.point((x, y), fill=garden.choice(("#251f33", "#37283d", "#463147")))
+    for x, color in ((280, "#776144"), (324, "#7f587f"), (370, "#815cb2"),
+                     (416, "#478a94"), (610, "#478a94"), (659, "#815cb2"), (705, "#7f587f")):
         draw.line((x, 221, x + 24, 221, x + 30, 227, x + 43, 227), fill=color)
         draw.rectangle((x, 220, x + 2, 222), fill=color)
+    draw.line((661, 226, 673, 226), fill=PINK)
     image = bloom(image, lights)
     draw = ImageDraw.Draw(image)
 
     # Extend the canopy and night sky into the former title band.
     for y in range(44):
         blend = max(0, y - 16) / 179
-        draw.line((0, y, 398, y),
+        draw.line((0, y, 749, y),
                   fill=(23 + int(13 * blend), 19 + int(5 * blend), 41 + int(14 * blend)))
     crown = random.Random(1771)
     for _ in range(55):
@@ -195,14 +261,13 @@ def montage():
         y = crown.randrange(25, 50) + abs(x - 70) // 14
         draw.rectangle((x, y, x + crown.randrange(4, 17), y + crown.randrange(2, 6)),
                        fill=crown.choice(("#111d28", "#192633", "#22303c", "#2d3447")))
-    draw.rectangle((399, 0, 749, 43), fill=INK)
-    draw.line((395, 14, 395, 46), fill="#715172", width=2)
-    for y in (18, 38):
-        draw.line((405, y, 423, y, 429, y + 4, 738, y + 4), fill="#30243f")
+    for _ in range(90):
+        x, y = garden.randrange(396, 749), garden.randrange(17, 91)
+        draw.point((x, y), fill=garden.choice(("#453553", "#56405e", "#29253f")))
+    for x, y, width in ((415, 33, 63), (443, 36, 76), (549, 24, 54), (567, 27, 62)):
+        draw.line((x, y, x + width, y), fill="#30253f")
     draw.line((0, 1, 170, 1, 181, 12, 573, 12, 584, 1, 749, 1), fill="#614883")
     draw.line((0, 1, 62, 1), fill=PURPLE, width=2)
-    text(draw, (445, 27), "CHARLESTON / SOUTH CAROLINA", MUTED)
-    draw.rectangle((720, 27, 724, 31), fill=GOLD)
     draw.rectangle((0, 237, 749, 249), fill=INK)
     text(draw, (20, 240), "SOFTWARE ENGINEERING / COMPUTER SCIENCE", MUTED)
     text(draw, (610, 240), "GNUJASON / 07", PURPLE)

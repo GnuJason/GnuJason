@@ -159,7 +159,7 @@ class ProfileTests(unittest.TestCase):
                      if attrs["src"] == "assets/cofc/cofc-montage.png")
         self.assertEqual(image["width"], "100%")
         self.assertNotIn("height", image)
-        for description in ("Jason", "Charleston", "courtyard", "workstation"):
+        for description in ("Jason", "Charleston", "courtyard", "columned", "walkway"):
             self.assertIn(description, image["alt"])
         anchors = ("operator-log", "college-of-charleston", "project-bays",
                    "toolchain", "open-channel")
@@ -195,7 +195,24 @@ class ProfileTests(unittest.TestCase):
             image = build_cofc.montage()
         for call in labels.call_args_list:
             self.assertNotIn("COLLEGE OF CHARLESTON", call.args[2].upper())
+            self.assertGreaterEqual(call.args[1][1], 237)
         self.assertGreater(len(image.crop((20, 23, 260, 43)).getcolors(4800)), 8)
+
+    def test_cofc_campus_spans_panorama(self):
+        image = build_cofc.montage()
+        for region in ((405, 116, 527, 184), (590, 109, 717, 184)):
+            with self.subTest(building=region):
+                colors = dict((color, count) for count, color in image.crop(region).getcolors(10000))
+                brick = sum(count for (r, g, b), count in colors.items()
+                            if r > g and b > g and 30 < r < 100 and 30 < b < 100)
+                windows = sum(count for (r, g, b), count in colors.items()
+                              if r > 100 and r > g > b and g > b * 1.2)
+                self.assertGreater(brick, 1500)
+                self.assertGreater(windows, 150)
+        red, green, blue = image.getpixel((534, 160))
+        self.assertLess(red, 180)
+        self.assertGreaterEqual(min(green, blue), 230)
+        self.assertGreater(len(image.crop((640, 58, 750, 135)).getcolors(10000)), 10)
 
 
 if __name__ == "__main__":
