@@ -77,14 +77,11 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
   <img src="assets/ui-elements/badge-git.png" height="30" alt="Git">
 </p>
 
-**Systems & tools** · Java, C, C++, Python, Linux, Git, 
 
-**Interfaces & data** · TypeScript, React, D3, FastAPI, WebSockets
 
 <img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
 
 <a id="open-channel"></a>
-Interested in real-time systems, useful automation, or the space between code and art? Explore a repository, open an issue, or bring a pull request.
 
 <p align="center">
   <a href="https://github.com/GnuJason">GitHub / GnuJason</a> &nbsp; • &nbsp;
