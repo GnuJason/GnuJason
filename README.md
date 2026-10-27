@@ -3,7 +3,7 @@
   <img src="assets/banners/bunker-engineer.gif" width="100%" alt="GNUjason — Software Engineer. A pixel-art engineer works at glowing terminals in a cyberpunk bunker overlooking a rain-soaked neon city.">
 </picture>
 
-<h1 align="center">GNUjason — Software Engineer</h1>
+<h1 align="center">GNUjason</h1>
 
 <p align="center">
   <picture>
