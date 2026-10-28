@@ -75,10 +75,12 @@ class ProfileTests(unittest.TestCase):
         for attrs in parser.images:
             self.assertIn("alt", attrs)
             self.assertTrue((profile.ROOT / attrs["src"]).is_file(), attrs["src"])
-        self.assertEqual(len(parser.sources), 3)
+        self.assertEqual(len(parser.sources), 8)
+        motion_sources = [attrs for attrs in parser.sources
+                          if attrs["media"] == "(prefers-reduced-motion: reduce)"]
+        self.assertEqual(len(motion_sources), 4)
         for attrs in parser.sources:
-            self.assertEqual(attrs["media"], "(prefers-reduced-motion: reduce)")
-            self.assertTrue((profile.ROOT / attrs["srcset"]).is_file())
+            self.assertTrue((profile.ROOT / attrs["srcset"].split()[0]).is_file())
         for anchor in parser.anchors:
             self.assertIn(anchor, parser.targets)
 
@@ -99,7 +101,7 @@ class ProfileTests(unittest.TestCase):
         parser = ReadmeImages()
         parser.feed(readme)
         badge = next(attrs for attrs in parser.images
-                     if attrs["src"] == "assets/opensuse/opensuse-pixel.png")
+                     if attrs["src"] == "assets/heritage/opensuse-petal-footer.png")
         self.assertEqual(badge["width"], "100%")
         self.assertNotIn("height", badge)
         self.assertIn('href="https://www.opensuse.org"', readme)

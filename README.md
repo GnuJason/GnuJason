@@ -1,4 +1,9 @@
 <picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/heritage/korean-american-heritage-still.png">
+  <img src="assets/heritage/korean-american-heritage.gif" width="100%" alt="GNUjason's Korean-American heritage: cherry blossoms frame Korean architecture and an American skyline, joined by a bridge over neon reflections beneath a Korean/American flag fusion. Mountains, the Statue of Liberty, and quiet cyberpunk interfaces share a purple, pink, and cyan night.">
+</picture>
+
+<picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/banners/bunker-engineer.png">
   <img src="assets/banners/bunker-engineer.gif" width="100%" alt="GNUjason — Software Engineer. A pixel-art engineer works at glowing terminals in a cyberpunk bunker overlooking a rain-soaked neon city.">
 </picture>
@@ -29,7 +34,7 @@
   </p>
 </div>
 
-<img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
+<img src="assets/heritage/petal-divider-near.png" width="100%" alt="">
 
 <a id="operator-log"></a>
 Hi I'm Jason — My focus is software engineering and web development, but specifically the kind that turns raw systems into living, observable platforms — full‑stack applications, backend automation pipelines, real‑time data flows, and the infrastructure that keeps them running. I build the tools, the APIs, the telemetry, and the interfaces that make complex systems usable, visual, and alive.
@@ -49,13 +54,13 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 <p align="center">College of Charleston · Software Engineering / Computer Science · Charleston, South Carolina</p>
 
-<img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
+<img src="assets/heritage/petal-divider-middle.png" width="100%" alt="">
 
 <p id="project-bays" align="center">
-  <a href="https://github.com/GnuJason/F1"><img src="assets/ui-elements/project-f1.png" width="390" alt="F1: real-time system telemetry inspired by a Formula 1 pit wall. Python, FastAPI, React. Open repository."></a>
-  <a href="https://github.com/GnuJason/geome"><img src="assets/ui-elements/project-geome.png" width="390" alt="geome: a lightweight C command-line tool for geolocation and network metadata. Open repository."></a>
-  <a href="https://github.com/GnuJason/Pulse-of-Humanity"><img src="assets/ui-elements/project-pulse.png" width="390" alt="Pulse of Humanity: real-time global population visualization powered by open data and deterministic simulation. Open repository."></a>
-  <a href="https://github.com/GnuJason/spratforge"><img src="assets/ui-elements/project-spratforge.png" width="390" alt="spratforge: C++ pixel-art tooling for sprite generation and animation. Open repository."></a>
+  <a href="https://github.com/GnuJason/F1"><picture><source media="(min-width: 1280px)" srcset="assets/guardians/framed-f1.png" width="420"><img src="assets/ui-elements/project-f1.png" width="390" alt="F1: real-time system telemetry inspired by a Formula 1 pit wall. Python, FastAPI, React. Open repository."></picture></a>
+  <a href="https://github.com/GnuJason/geome"><picture><source media="(min-width: 1280px)" srcset="assets/guardians/framed-geome.png" width="420"><img src="assets/ui-elements/project-geome.png" width="390" alt="geome: a lightweight C command-line tool for geolocation and network metadata. Open repository."></picture></a>
+  <a href="https://github.com/GnuJason/Pulse-of-Humanity"><picture><source media="(min-width: 1280px)" srcset="assets/guardians/framed-pulse.png" width="420"><img src="assets/ui-elements/project-pulse.png" width="390" alt="Pulse of Humanity: real-time global population visualization powered by open data and deterministic simulation. Open repository."></picture></a>
+  <a href="https://github.com/GnuJason/spratforge"><picture><source media="(min-width: 1280px)" srcset="assets/guardians/framed-spratforge.png" width="420"><img src="assets/ui-elements/project-spratforge.png" width="390" alt="spratforge: C++ pixel-art tooling for sprite generation and animation. Open repository."></picture></a>
 </p>
 
 <p align="center">
@@ -79,7 +84,7 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 
 
-<img src="assets/ascii-dividers/bunker-divider.png" width="100%" alt="">
+<img src="assets/heritage/petal-divider-far.png" width="100%" alt="">
 
 <a id="open-channel"></a>
 
@@ -91,7 +96,7 @@ workbench : API‑driven content systems / automation scripts / data refresh pip
 
 <div align="left">
   <a href="https://www.opensuse.org">
-    <img src="assets/opensuse/opensuse-pixel.png" width="100%" alt="openSUSE / Built in the open. Purple pixel lizard and neon circuitry across the bunker footer.">
+    <img src="assets/heritage/opensuse-petal-footer.png" width="100%" alt="openSUSE / Built in the open. Purple pixel lizard and neon circuitry across the bunker footer, with a few fallen cherry blossom petals along the far-right floor.">
   </a>
 </div>
 

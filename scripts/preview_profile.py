@@ -17,6 +17,8 @@ main { max-width: 1012px; margin: 24px auto; padding: 32px;
        border: 1px solid #30363d; border-radius: 6px; }
 img { max-width: 100%; vertical-align: middle; }
 img[width]:not([height]) { height: auto; }
+img[align=left] { padding-right: 20px; box-sizing: content-box; }
+img[align=right] { padding-left: 20px; box-sizing: content-box; }
 h1, h2 { line-height: 1.25; padding-bottom: .3em; border-bottom: 1px solid #30363d; }
 h1 { font-size: 2em; } h2 { font-size: 1.5em; margin-top: 24px; }
 p { margin: 16px 0; } a { color: #58a6ff; text-decoration: none; }

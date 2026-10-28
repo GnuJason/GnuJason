@@ -27,6 +27,47 @@ proportionally on mobile, and links to the main openSUSE site.
 
 ## Art Direction
 
+### Korean-American heritage
+
+The supplied full-resolution original is preserved in `assets/Designer.png`.
+Its complete 1536 x 1024 composition opens the README before the bunker hero:
+this is an identity image, not a project card or a toolchain badge.
+
+Rebuild the heritage assets independently, without regenerating existing art:
+
+```sh
+/tmp/gnujason-profile-venv/bin/python scripts/build_heritage.py
+/tmp/gnujason-profile-venv/bin/python -m unittest discover -s scripts -p 'test_*.py' -v
+```
+
+`assets/heritage/korean-american-heritage-still.png` retains native resolution
+and true color. The source already has detailed pixel-style forms. The treatment
+settles only low-contrast, dark 2 x 2 clusters onto an existing source color:
+each channel must span at most 18 levels, and all channels must stay below 150.
+High-contrast edges, bright lights, blossoms and fine structure remain untouched.
+Environmental lettering, the lower GNUjason interface, the flag fusion and
+Liberty silhouette are explicitly protected. There is no resizing, crop,
+global posterization, hue remapping, bloom or generic pixelation filter.
+
+The GIF uses a single source-adaptive 248-color scene palette plus reserved
+petal colors, without dithering or per-frame palette changes. This is a GIF
+format limitation, not the still's color treatment. The 144 frames at 100 ms
+make a 14.4-second infinite loop. Twelve staggered petal paths start on visible
+blossom branches, with different path lengths/speeds, two pixel scales, lateral
+drift and four hand-drawn tumble poses. Petals fade in at the canopy and fade out
+before the bottom interface, so the loop does not reset visibly. There is no
+full-scene flicker or additional competing animation. The existing `picture`
+pattern selects the complete static PNG for reduced-motion users.
+
+Three static derivatives of the original divider contain 7, 3 and 1 petals:
+before Operator Log, Project Bays and Open Channel respectively. The other
+dividers are unchanged, with no accents added to badges or project cards.
+`assets/heritage/opensuse-petal-footer.png` preserves the original openSUSE strip
+except for nine dim fallen petals on a small far-right floor segment, away from
+the logo and lettering. All original bunker, Charleston, project, divider and
+openSUSE assets remain unchanged. Rebuild this derivative after any intentional
+change to the original openSUSE strip.
+
 ### College of Charleston panorama
 
 The static `assets/cofc/cofc-montage.png` sits between Operator Log and
@@ -55,6 +96,36 @@ flow across the courtyard, without a separate title band. The small academic
 line below identifies the college. README sections use invisible explicit anchors within their
 content rather than visible heading/icon rows; existing pixel dividers provide
 separation without additional heading underlines or spacer containers.
+
+### Project Bays guardians
+
+Two Korean-inspired, stacked architectural guardian totems frame the existing
+linked cards on desktop. Rebuild only these assets with:
+
+```sh
+/tmp/gnujason-profile-venv/bin/python scripts/build_guardians.py
+/tmp/gnujason-profile-venv/bin/python -m unittest discover -s scripts -p 'test_guardians.py' -v
+```
+
+The left uses restrained cyan and the right magenta/violet with cyan accents.
+Layered rooflines and ornamental brackets flow into stacked carved guardian
+forms; traces and nodes emerge as the faces become hardware panels and
+mechanical feet. A small blossom branch appears only on the left and tiny
+gold fittings echo Charleston.
+
+The renderer draws each complete totem at 50 x 400 and enlarges it exactly 2x.
+It builds four 900 x 400 desktop derivatives by appending 100 x 400 slices
+beside the original 800 x 400 card pixels without altering those pixels.
+Each derivative remains linked to its original project, and the original
+card files, links, alt text and order remain unchanged. At the measured
+846 px GitHub profile width the 420 px images fit in two columns, displaying
+each totem about 47 px wide and each card about 373 px wide (4.3% below its
+previous 390 px width). The frame slices themselves are part of the project's
+link, not extra projects.
+
+Below 1280 px, the `picture` elements use the original 390 px cards directly,
+with no totems, table, forced columns or custom README CSS. Static sources do
+not add motion. Renderers without `picture` support retain the original cards.
 
 ### Existing artwork
 
