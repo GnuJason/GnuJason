@@ -8,7 +8,6 @@
   <img src="assets/banners/bunker-engineer.gif" width="100%" alt="GNUjason — Software Engineer. A pixel-art engineer works at glowing terminals in a cyberpunk bunker overlooking a rain-soaked neon city.">
 </picture>
 
-<h1 align="center">GNUjason</h1>
 
 <p align="center">
   <picture>
@@ -37,7 +36,7 @@
 <img src="assets/heritage/petal-divider-near.png" width="100%" alt="">
 
 <a id="operator-log"></a>
-Hi I'm Jason — My focus is software engineering and web development, but specifically the kind that turns raw systems into living, observable platforms — full‑stack applications, backend automation pipelines, real‑time data flows, and the infrastructure that keeps them running. I build the tools, the APIs, the telemetry, and the interfaces that make complex systems usable, visual, and alive.
+Hi I'm Jason — My focus is software engineering and web development, full‑stack applications, backend automation pipelines, real‑time data flows. 
 
 ```text
 operator  : GnuJason
